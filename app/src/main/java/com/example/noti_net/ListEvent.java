@@ -45,7 +45,7 @@ public class ListEvent extends AppCompatActivity
                 try
                 {
                     Thread.sleep(10000);
-                    step.setText(CreationEvent.pasosExtra[counter]);
+                    step.setText(CreationEvent.pasosExtra[counter - 1]);
                     publishProgress(ListEvent.counter);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -56,7 +56,7 @@ public class ListEvent extends AppCompatActivity
         @Override
         protected void onPostExecute(String result)
         {
-            ListEvent.progressBar.setVisibility(View.GONE);
+            //ListEvent.progressBar.setVisibility(View.GONE);
         }
         @Override
         protected void onPreExecute()
