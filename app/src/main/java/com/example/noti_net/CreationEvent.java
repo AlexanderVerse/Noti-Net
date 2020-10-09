@@ -2,6 +2,7 @@ package com.example.noti_net;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -23,9 +24,14 @@ public class CreationEvent extends AppCompatActivity {
     public static ArrayList<Timer> eventosTiempo =  new ArrayList<Timer>();
     public static ArrayList<Integer> numberStepEvent = new ArrayList<Integer>();
     public static ArrayList<Integer> conteoEvento = new ArrayList<Integer>();
+    public static ArrayList<String> nameEvent = new ArrayList<String>();
     public String steps = "";
     public TextView viewSteps;
     public EditText step;
+    public Intent intent;
+    public EditText work;
+    public static String pasosExtra[];
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -33,6 +39,7 @@ public class CreationEvent extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_creation_event);
 
+        work = findViewById(R.id.work);
         step = findViewById(R.id.steps);
         viewSteps = findViewById(R.id.viewSteps);
         String[] group = new String[Creationgroup.group.size()];
@@ -70,8 +77,10 @@ public class CreationEvent extends AppCompatActivity {
 
     public void createEvent(View view)
     {
-        int op = 0;
         conteoEvento.add(0);
+        String pasos = viewSteps.getText().toString();
+        pasosExtra = pasos.split(",");
+        numberStepEvent.add(pasosExtra.length);
         Timer t = new Timer();
         t.scheduleAtFixedRate(new TimerTask()
         {
@@ -79,18 +88,20 @@ public class CreationEvent extends AppCompatActivity {
             public void run()
             {
 
-                System.out.println("A Kiss every 5 seconds: " + conteoEvento.get(0));
+                System.out.println(numberStepEvent.get(0) + ": A Kiss every" +
+                        " 5 " +
+                        "seconds: " + conteoEvento.get(0));
                 if(conteoEvento.get(0) == numberStepEvent.get(0) && conteoEvento.get(0) != 0)
                 {
                     eventosTiempo.get(0).cancel();
                 }
-                conteoEvento.set(0, conteoEvento.get(0) + 1);
+                conteoEvento.set(0, conteoEvento.get(conteoEvento.size() - 1) + 1);
             }       
         },0,5000);
         eventosTiempo.add(t);
-        String pasos = viewSteps.getText().toString();
-        String parts[] = pasos.split(",");
-        numberStepEvent.add(parts.length);
+        nameEvent.add(work.getText().toString());
+        intent = new Intent(CreationEvent.this, ListEvent.class);
+        startActivity(intent);
     }
 
 }
