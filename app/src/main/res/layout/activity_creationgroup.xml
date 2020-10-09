@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Creationgroup">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="88dp"
+                android:text="@string/titleCreateGroup"
+                android:textAlignment="center"
+                android:textColor="#6F61CC"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/nameGroup"
+                android:layout_width="300sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50sp"
+                android:layout_marginTop="100dp"
+                android:ems="10"
+                android:hint="Nombre del grupo"
+                android:inputType="textPersonName"
+                android:textAlignment="textStart" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="150sp"
+                android:layout_marginTop="25dp"
+                android:text="Integrantes: "
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/identificationUser"
+                android:layout_width="300sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50sp"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:hint="Correo"
+                android:inputType="textEmailAddress"
+                android:textAlignment="textStart" />
+
+            <Button
+                android:id="@+id/addUser"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100sp"
+                android:focusable="false"
+                android:onClick="addUser"
+                android:text="Agregar usuario" />
+
+            <TextView
+                android:id="@+id/listUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="20sp"
+                android:focusable="false"
+                android:hint="Correos o números telefónicos"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/createGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="150sp"
+                android:layout_marginTop="30sp"
+                android:focusable="false"
+                android:onClick="createGroup"
+                android:text="Crear grupo" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

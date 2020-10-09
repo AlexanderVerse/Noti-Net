@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Noti-Net</string>
+    <string name="createEvent">Crear evento</string>
+    <string name="createGroup">Crear grupo</string>
+    <string name="listEvent">Listar eventos</string>
+    <string name="titleCreateGroup">Creación de grupo</string>
+    <string name="work">Agrega tarea</string>
+    <string name="assignWork">Asigna un usuario a la tarea</string>
+</resources>
