@@ -56,7 +56,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/work"
+        android:id="@+id/event"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -81,7 +81,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/work" />
+        app:layout_constraintTop_toBottomOf="@+id/event" />
 
     <Button
         android:id="@+id/addStep"

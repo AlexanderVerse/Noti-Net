@@ -10,7 +10,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -39,7 +38,7 @@ public class CreationEvent extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_creation_event);
 
-        work = findViewById(R.id.work);
+        work = findViewById(R.id.event);
         step = findViewById(R.id.steps);
         viewSteps = findViewById(R.id.viewSteps);
         String[] group = new String[Creationgroup.group.size()];
