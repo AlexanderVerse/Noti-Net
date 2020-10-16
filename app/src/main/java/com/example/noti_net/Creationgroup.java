@@ -36,7 +36,7 @@ public class Creationgroup extends AppCompatActivity
     {
         if(!user.equals(""))
         {
-            user = user + ", " + identificationUser.getText().toString();
+            user = user + "\n" + identificationUser.getText().toString();
         }
         else
         {

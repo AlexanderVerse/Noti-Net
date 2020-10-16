@@ -80,24 +80,24 @@ public class CreationEvent extends AppCompatActivity {
         String pasos = viewSteps.getText().toString();
         pasosExtra = pasos.split(",");
         numberStepEvent.add(pasosExtra.length);
-        Timer t = new Timer();
-        t.scheduleAtFixedRate(new TimerTask()
-        {
-            @Override
-            public void run()
-            {
-
-                System.out.println(numberStepEvent.get(0) + ": A Kiss every" +
-                        " 5 " +
-                        "seconds: " + conteoEvento.get(0));
-                if(conteoEvento.get(0) == numberStepEvent.get(0) && conteoEvento.get(0) != 0)
-                {
-                    eventosTiempo.get(0).cancel();
-                }
-                conteoEvento.set(0, conteoEvento.get(conteoEvento.size() - 1) + 1);
-            }       
-        },0,5000);
-        eventosTiempo.add(t);
+//        Timer t = new Timer();
+//        t.scheduleAtFixedRate(new TimerTask()
+//        {
+//            @Override
+//            public void run()
+//            {
+//
+//                System.out.println(numberStepEvent.get(0) + ": A Kiss every" +
+//                        " 5 " +
+//                        "seconds: " + conteoEvento.get(0));
+//                if(conteoEvento.get(0) == numberStepEvent.get(0) && conteoEvento.get(0) != 0)
+//                {
+//                    eventosTiempo.get(0).cancel();
+//                }
+//                conteoEvento.set(0, conteoEvento.get(conteoEvento.size() - 1) + 1);
+//            }
+//        },0,5000);
+//        eventosTiempo.add(t);
         nameEvent.add(work.getText().toString());
         intent = new Intent(CreationEvent.this, ListEvent.class);
         startActivity(intent);
