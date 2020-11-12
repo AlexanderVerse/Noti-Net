@@ -6,4 +6,10 @@
     <string name="titleCreateGroup">Creación de grupo</string>
     <string name="work">Agrega tarea</string>
     <string name="assignWork">Asigna un usuario a la tarea</string>
+    <string name="signUp">Sign up</string>
+    <string name="recommendationPassword">Your record doesn’t exist in ourdatabase.  Why don’t you signup in simple 3 steps now?</string>
+    <string name="phoneNumber">Phone Number</string>
+    <string name="bottomSignUp">Signup Now</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
 </resources>
