@@ -9,7 +9,13 @@
     <string name="signUp">Sign up</string>
     <string name="recommendationPassword">Your record doesn’t exist in ourdatabase.  Why don’t you signup in simple 3 steps now?</string>
     <string name="phoneNumber">Phone Number</string>
-    <string name="bottomSignUp">Signup Now</string>
+    <string name="buttonSignUp">Signup Now</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="titleSignIn">Sign In</string>
+    <string name="recommendationSignIn">Enter your Mobile number / Email ID to sign in for petition</string>
+    <string name="buttonSingIn">Continue</string>
+    <string name="signInPhone">Eg: +91 98765 XXXXX</string>
+    <string name="signIn">Sign In</string>
+    <string name="nameProyect">Noti-Net</string>
 </resources>

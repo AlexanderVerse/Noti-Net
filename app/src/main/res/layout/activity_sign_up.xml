@@ -86,13 +86,16 @@
 
     <Button
         android:id="@+id/signUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="162dp"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="161dp"
-        android:text="@string/bottomSignUp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/button"
+        android:onClick="signUp"
+        android:text="@string/buttonSignUp"
         android:textAllCaps="false"
+        android:textColor="@color/textButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
