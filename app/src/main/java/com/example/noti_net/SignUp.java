@@ -66,7 +66,7 @@ public class SignUp extends AppCompatActivity
             {
                 try
                 {
-                    if (statusResponse == 202)
+                    if (statusResponse == 201)
                         openView(response);
                     else
                     {
@@ -88,7 +88,7 @@ public class SignUp extends AppCompatActivity
             public void onErrorResponse(VolleyError error)
             {
                 Toast.makeText(SignUp.this,
-                        "Error en respuesta del servidor: " + error.getMessage(),
+                        "Error en respuesta del servidor: " + error,
                         Toast.LENGTH_SHORT).show();
                 signUp.setEnabled(true);
             }
