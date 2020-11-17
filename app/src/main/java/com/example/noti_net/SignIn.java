@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,6 +42,7 @@ public class SignIn extends AppCompatActivity
         routeSignIn = dataConfig.getUrlServer() + "/signIn";;
         phoneNumber = (EditText) findViewById(R.id.phoneNumber);
         password = (EditText) findViewById(R.id.password);
+        password.setText("");
         signIn = (Button)findViewById(R.id.signIn);
     }
 
@@ -102,10 +104,12 @@ public class SignIn extends AppCompatActivity
     {
         try
         {
+            finish();
             JSONObject struct = response.getJSONObject("estructura");
             Intent intent = new Intent(SignIn.this, Home.class);
-            intent.putExtra("phoneNumber", struct.getString("phoneNumber"));
-            intent.putExtra("email", struct.getString("email"));
+            DataConfig.setName(struct.getString("name"));
+            DataConfig.setEmail(struct.getString("email"));
+            DataConfig.setPhoneNumber(struct.getString("phoneNumber"));
             startActivity(intent);
         }
         catch (Exception e)

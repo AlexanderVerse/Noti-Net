@@ -18,6 +18,6 @@
     <string name="signInPhone">Eg: +91 98765 XXXXX</string>
     <string name="signIn">Sign In</string>
     <string name="nameProyect">Noti-Net</string>
-    <string name="group">Grupos</string>
+    <string name="group">Tareas</string>
     <string name="mygroups">Mis grupos</string>
 </resources>

@@ -26,6 +26,7 @@ import java.util.Map;
 public class SignUp extends AppCompatActivity
 {
 
+    private EditText name;
     private EditText phoneNumber;
     private EditText email;
     private EditText password;
@@ -40,6 +41,7 @@ public class SignUp extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        name = (EditText) findViewById(R.id.name);
         phoneNumber = (EditText) findViewById(R.id.phoneNumber);
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
@@ -56,6 +58,7 @@ public class SignUp extends AppCompatActivity
         arguments.put("phoneNumber", phoneNumber.getText().toString());
         arguments.put("email", email.getText().toString());
         arguments.put("password", password.getText().toString());
+        arguments.put("name", name.getText().toString());
         JSONObject argumentsBody = new JSONObject(arguments);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                 routeSignUp,
@@ -105,13 +108,15 @@ public class SignUp extends AppCompatActivity
 
     public void openView(JSONObject response)
     {
-        //JSONObject struct = response.;
+        JSONObject struct = response;
         try
         {
+            finish();   
             Intent intent = new Intent(SignUp.this, Home.class);
-            intent.putExtra("phoneNumber", phoneNumber.getText().toString());
-            intent.putExtra("email", email.getText().toString());
-            intent.putExtra("password", email.getText().toString());
+            DataConfig.setName(struct.getString("name"));
+            DataConfig.setEmail(struct.getString("email"));
+            DataConfig.setPhoneNumber(struct.getString("phoneNumber"));
+            DataConfig.setPassword(struct.getString("password"));
             startActivity(intent);
         }
         catch (Exception e)
