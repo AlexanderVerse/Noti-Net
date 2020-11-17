@@ -20,4 +20,5 @@
     <string name="nameProyect">Noti-Net</string>
     <string name="group">Tareas</string>
     <string name="mygroups">Mis grupos</string>
+    <string name="textNameGroup">Nombre del grupo</string>
 </resources>

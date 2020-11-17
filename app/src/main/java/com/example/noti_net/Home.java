@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.contentcapture.DataRemovalRequest;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -22,10 +23,11 @@ public class Home extends AppCompatActivity
     private String phoneNumber;
     private String email;
     private String password;
-    private TextView nameEditT;
-    private TextView dateEditT;
+        private TextView nameEditT;
+        private TextView dateEditT;
     private ArrayAdapter<String> adapter;
     private Spinner listDate;
+    private Button groups;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -49,13 +51,14 @@ public class Home extends AppCompatActivity
 
     public void viewGroups(View view)
     {
-        Intent intent = new Intent(this, Groups.class);
+        finish();
+        Intent intent = new Intent(Home.this, Groups.class);
         startActivity(intent);
     }
 
     public void viewProyects(View view)
     {
-        Intent intent = new Intent(this, Proyects.class);
+        Intent intent = new Intent(Home.this, Groups.class);
         startActivity(intent);
     }
 }

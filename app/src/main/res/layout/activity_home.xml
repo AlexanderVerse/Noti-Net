@@ -7,33 +7,33 @@
     tools:context=".Home">
 
     <Button
-        android:id="@+id/proyects"
+        android:id="@+id/groups"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="1dp"
         android:background="#FFFFFF"
-        android:onClick="viewProyects"
+        android:onClick="viewGroups"
         android:text="@string/mygroups"
         android:textAllCaps="false"
-        app:layout_constraintBaseline_toBaselineOf="@+id/groups"
-        app:layout_constraintEnd_toStartOf="@+id/groups"
+        app:layout_constraintBaseline_toBaselineOf="@+id/task"
+        app:layout_constraintEnd_toStartOf="@+id/task"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/groups"
+        android:id="@+id/task"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:layout_marginTop="10dp"
         android:background="#FFFFFF"
-        android:onClick="viewGroups"
+        android:onClick="viewProyects"
         android:text="@string/group"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/proyects"
+        app:layout_constraintStart_toEndOf="@+id/groups"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <ImageView
@@ -51,7 +51,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:textSize="16sp"
+        android:textColor="@color/brackground"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/imageView4"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,6 +86,6 @@
         android:backgroundTint="#F83D3D"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/proyects" />
+        app:layout_constraintTop_toBottomOf="@+id/groups" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
