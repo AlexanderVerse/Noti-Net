@@ -15,6 +15,7 @@
         android:onClick="viewGroups"
         android:text="@string/mygroups"
         android:textAllCaps="false"
+        android:textSize="20sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/task"
         app:layout_constraintEnd_toStartOf="@+id/task"
         app:layout_constraintHorizontal_bias="0.5"
@@ -31,6 +32,7 @@
         android:onClick="viewProyects"
         android:text="@string/group"
         android:textAllCaps="false"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/groups"
@@ -41,7 +43,6 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="15dp"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/imageuser" />

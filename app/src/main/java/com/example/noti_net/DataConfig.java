@@ -7,6 +7,7 @@ public class DataConfig
     public static String phoneNumber;
     public static String email;
     public static String password;
+    public static String serverURL = "http://192.168.1.128:8080";
 
     public DataConfig()
     {
@@ -34,6 +35,8 @@ public class DataConfig
     }
 
     public static String getPassword() { return password; }
+
+    public static String getServerURL() { return serverURL; }
 
     public static void setName(String nameS)
     {
