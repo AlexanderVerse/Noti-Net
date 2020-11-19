@@ -7,11 +7,13 @@ public class DataConfig
     public static String phoneNumber;
     public static String email;
     public static String password;
-    public static String serverURL = "http://192.168.1.128:8080";
+    public static String serverURL = "http://nodejs-mongo-persistent-lad-sched.b9ad.pro-us-east-1.openshiftapps.com";
+    //public static String serverURL = "http://192.168.1.128:8080";
 
     public DataConfig()
     {
-        urlServer = "http://192.168.1.128:8080";
+        urlServer = "http://nodejs-mongo-persistent-lad-sched.b9ad.pro-us-east-1.openshiftapps.com";
+        //urlServer = "http://192.168.1.128:8080";
     }
 
     public String getUrlServer()

@@ -113,10 +113,10 @@ public class SignUp extends AppCompatActivity
         {
             finish();   
             Intent intent = new Intent(SignUp.this, Home.class);
-            DataConfig.setName(struct.getString("name"));
-            DataConfig.setEmail(struct.getString("email"));
-            DataConfig.setPhoneNumber(struct.getString("phoneNumber"));
-            DataConfig.setPassword(struct.getString("password"));
+            DataConfig.setName(name.getText().toString());
+            DataConfig.setEmail(email.getText().toString());
+            DataConfig.setPhoneNumber(phoneNumber.getText().toString());
+            DataConfig.setPassword(phoneNumber.getText().toString());
             startActivity(intent);
         }
         catch (Exception e)
