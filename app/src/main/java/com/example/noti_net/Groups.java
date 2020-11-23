@@ -49,6 +49,7 @@ public class Groups extends AppCompatActivity
     private String urlServer;
     private String routeGroups;
     private GridLayout gridGroups;
+    private LinearLayout linearIntegrant;
     private ImageView[] groupsImage;
     private String[] nameImage;
 
@@ -66,6 +67,7 @@ public class Groups extends AppCompatActivity
         dateEditT.setText("Tus tareas de hoy " + dateFormat.format(date));
         routeGroups = urlServer + "/getGroups?";
         gridGroups = (GridLayout) findViewById(R.id.gridLayoutGroups);
+        linearIntegrant = (LinearLayout) findViewById(R.id.linearLayoutIntegrants);
         getGroups();
     }
 
@@ -86,8 +88,8 @@ public class Groups extends AppCompatActivity
     private void getGroups()
     {
         queue = Volley.newRequestQueue(this);
-        //routeGroups += "phoneNumber=" + DataConfig.getPhoneNumber();
-        routeGroups += "phoneNumber=2441475065";
+        routeGroups += "phoneNumber=" + DataConfig.getPhoneNumber();
+        //routeGroups += "phoneNumber=2441475065";
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, routeGroups, null,
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -203,12 +205,26 @@ public class Groups extends AppCompatActivity
             System.out.println("Error n obtener estrucutrua de uan posición del arreglo: " + e);
         }
     }
+    
 
     private void createListenerGroups(JSONArray struct)
     {
        for (int i = 0; i < struct.length(); i++)
        {
-           
+           final int finalX = i;
+           groupsImage[finalX].setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v)
+               {
+                   Toast.makeText(Groups.this, "Tome captura de imagen: " + finalX,
+                           Toast.LENGTH_LONG).show();
+                   Intent intent = new Intent(Groups.this, SpecificGroup.class);
+                   intent.putExtra("nameGroup", nameImage[finalX]);
+                   intent.putExtra("phoneNumber", DataConfig.getPhoneNumber());
+                   //intent.putExtra("phoneNumber", DataConfig.getPhoneNumber());
+                   startActivity(intent);
+               }
+           });
        }
     }
     
